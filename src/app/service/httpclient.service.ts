@@ -3,10 +3,10 @@ import { HttpClient } from '@angular/common/http';
 
 export class Employee{
   constructor(
-    public empId:string,
-    public name:string,
-    public designation:string,
-    public salary:string,
+    public empId: string,
+    public name: string,
+    public designation: string,
+    public salary: string,
   ) {}
 }
 
@@ -16,7 +16,7 @@ export class Employee{
 export class HttpClientService {
 
   constructor(
-    private httpClient:HttpClient
+    private httpClient: HttpClient
   ) { 
      }
 
@@ -31,5 +31,9 @@ export class HttpClientService {
 
   public createEmployee(employee) {
     return this.httpClient.post<Employee>('http://localhost:8080/save', employee);
+  }
+
+  public updateEmployee(employee) {
+    return this.httpClient.post<Employee>('http://localhost:8080/update', employee);
   }
 }
