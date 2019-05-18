@@ -1,9 +1,16 @@
 <header>
   <nav class ="navbar navbar-expand-md navbar-dark bg-dark">
-  <div><a href="https://www.javainuse.com" class="navbar-brand">ArkGroup</a></div>
+  <div>
+      <a class="navbar-item">
+          <img src="assets/images/arkgroup.png" width="80px" height="50px">  
+      </a>
+  </div>
   
   <ul class="navbar-nav">
      
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">Home</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">About</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">Contact Us</a></li>
     <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">View Employees</a></li>
     <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/addemployee" class="nav-link">Add New Employee</a></li>
     <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>

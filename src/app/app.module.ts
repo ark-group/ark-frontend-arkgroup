@@ -11,6 +11,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { LogoutComponent } from './logout/logout.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    NavComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
